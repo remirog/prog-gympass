@@ -22,6 +22,6 @@ public class Sala {
     }
 
     public String toString() {
-        return "Sala{ codigoSala=" + codigoSala + ", descripcion=" + descripcion + "}";
+        return "Sala{ codigoSala = " + codigoSala + ", descripcion = " + descripcion + "}";
     }
 }
