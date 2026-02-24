@@ -13,14 +13,30 @@ public class Sala {
         this.descripcion = descripcion;
     }
 
+    /**
+     * Obtener codigo de sala
+     * @return
+     */
+
     public int getCodigoSala() {
         return codigoSala;
     }
+
+    /**
+     * Obtener descripcion de sala
+     * @return
+     */
 
     public String getDescripcion() {
         return descripcion;
     }
 
+    /**
+     * Obtener la información entera de socio
+     * @return
+     */
+
+    @Override
     public String toString() {
         return "Sala{ codigoSala = " + codigoSala + ", descripcion = " + descripcion + "}";
     }

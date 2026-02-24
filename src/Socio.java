@@ -14,14 +14,30 @@ public class Socio {
         this.nombre = nombre;
     }
 
+    /**
+     * Obtener número de socio
+     * @return
+     */
+
     public int getNumSocio() {
         return numSocio;
     }
+
+    /**
+     * Obtener nombre de socio
+     * @return
+     */
 
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Obtener la información entera de socio
+     * @return
+     */
+
+    @Override
     public String toString() {
         return "Socio{ numSocio = " + numSocio + ", nombre = " + nombre + "}";
     }
