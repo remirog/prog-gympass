@@ -53,6 +53,7 @@ public class Gimnasio {
 
         for (int i = 0; i < MAX_SOCIOS && !resultado; i++) {
             if (this.socios[i] == null) {
+                siguientePosicion = i;
                 resultado = true;
             }
         }
@@ -69,6 +70,19 @@ public class Gimnasio {
             }
         }
         return resultado;
+    }
+
+    public Socio expulsarSocio(int id){
+
+        for (int i = 0; i < MAX_SOCIOS; i++) {
+         if (buscarSocio(id)){
+             socios[i] = null;
+             return socios[i];
+            }
+        }
+        return null;
+
+
     }
 
 
