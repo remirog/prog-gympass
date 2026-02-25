@@ -6,7 +6,8 @@ public class Gimnasio {
     private Sala salas[];
     private int responsableId;
 
-    private int siguientePosicion = 0;
+    private int siguientePosicionSocio = 0;
+    private int siguientePosicionSala = 0;
 
     private final int MAX_SOCIOS;
     private final int MAX_SALAS;
@@ -40,10 +41,10 @@ public class Gimnasio {
     public boolean registrarSocios(Socio socio) {
         boolean resultado = false;
 
-        if ( !buscarSocio(socio.getNumSocio()) && comprobarSiHayHueco()) {
-            socios[siguientePosicion] = socio;
-            siguientePosicion++;
-            return resultado;
+        if ( !buscarSocio(socio.getNumSocio()) && comprobarSiHayHuecoSocio()) {
+            socios[siguientePosicionSocio] = socio;
+            siguientePosicionSocio++;
+            resultado = true;
         }
         return resultado;
     }
@@ -53,12 +54,12 @@ public class Gimnasio {
      * @return si ha encontrado hueco devuelve un true sino un false
      */
 
-    public boolean comprobarSiHayHueco(){
+    public boolean comprobarSiHayHuecoSocio(){
         boolean resultado = false;
 
         for (int i = 0; i < MAX_SOCIOS && !resultado; i++) {
             if (this.socios[i] == null) {
-                siguientePosicion = i;
+                siguientePosicionSocio = i;
                 resultado = true;
             }
         }
@@ -90,14 +91,15 @@ public class Gimnasio {
      */
 
     public Socio expulsarSocio(int id){
+        Socio socio = null;
 
         for (int i = 0; i < MAX_SOCIOS; i++) {
          if (buscarSocio(id)){
              socios[i] = null;
-             return socios[i];
+             socio = socios[i];
             }
         }
-        return null;
+        return socio;
 
     }
 
@@ -113,6 +115,58 @@ public class Gimnasio {
         for (int i = 0; i < MAX_SOCIOS && !resultado; i++) {
             if (socios[i].getNumSocio() == numeroSocio){
                 responsableId = i;
+                resultado = true;
+            }
+        }
+        return resultado;
+    }
+
+    /**
+     * Incorporamos una sala a salas
+     * @param sala que quermos incorporar
+     * @return si la ha creado y todó es correcto devuelve un true sino un false
+     */
+
+    public boolean incorporarSala(Sala sala){
+        boolean resultado = false;
+
+        if ( !buscarSala(sala.getCodigoSala()) && comprobarHuecoLibreSala()) {
+            salas[siguientePosicionSala] = sala;
+            siguientePosicionSala++;
+            resultado = true;
+        }
+        return resultado;
+    }
+
+    /**
+     *
+     * @return si hay hueco libre y todó es correcto devuelve un true sino un false
+     */
+
+    public boolean comprobarHuecoLibreSala(){
+        boolean resultado = false;
+
+        for (int i = 0; i < MAX_SALAS && !resultado; i++) {
+            if (this.salas[i] == null) {
+                siguientePosicionSala = i;
+                resultado = true;
+            }
+        }
+        return resultado;
+    }
+
+    /**
+     * Busca la sala si esta o no esta a traves de codigoSala
+     * @param codigoSala de la sala
+     * @return si ha encontrado la sala y todó es correcto devuelve un true sino un false
+     */
+
+    public boolean buscarSala(int codigoSala){
+        boolean resultado = false;
+        int i = 0;
+
+        while (i < MAX_SALAS && !resultado) {
+            if (salas[i] != null && codigoSala == salas[i].getCodigoSala()){
                 resultado = true;
             }
         }
