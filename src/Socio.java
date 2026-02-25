@@ -5,8 +5,9 @@ public class Socio {
 
     /**
      * Constructor del Socio
+     *
      * @param numSocio identificador del socio
-     * @param nombre del socio
+     * @param nombre   del socio
      */
 
     public Socio(int numSocio, String nombre) {
@@ -16,6 +17,7 @@ public class Socio {
 
     /**
      * Obtener número de socio
+     *
      * @return devuelve el número del socio
      */
 
@@ -25,6 +27,7 @@ public class Socio {
 
     /**
      * Obtener nombre de socio
+     *
      * @return devuelve el nombre del socio
      */
 
@@ -34,6 +37,7 @@ public class Socio {
 
     /**
      * Obtener la información entera de socio
+     *
      * @return devuelve la información del socio
      */
 

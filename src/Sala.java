@@ -5,7 +5,8 @@ public class Sala {
 
     /**
      * Constructor de la Sala
-     * @param codigoSala identificador de la sala
+     *
+     * @param codigoSala  identificador de la sala
      * @param descripcion de la sala
      */
     public Sala(int codigoSala, String descripcion) {
@@ -15,6 +16,7 @@ public class Sala {
 
     /**
      * Obtener codigo de sala
+     *
      * @return devuelve el código de la asla
      */
 
@@ -24,6 +26,7 @@ public class Sala {
 
     /**
      * Obtener descripcion de sala
+     *
      * @return devuelve la descripción de la sala
      */
 
@@ -33,6 +36,7 @@ public class Sala {
 
     /**
      * Obtener la información entera de socio
+     *
      * @return devuelve la información de la sala
      */
 
