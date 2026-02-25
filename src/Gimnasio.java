@@ -4,7 +4,7 @@ public class Gimnasio {
     private final String nombre;
     private Socio socios[];
     private Sala salas[];
-    private int responsableld;
+    private int responsableId;
 
     private int siguientePosicion = 0;
 
@@ -28,7 +28,7 @@ public class Gimnasio {
         this.socios = new Socio[MAX_SOCIOS];
         this.salas = new Sala[MAX_SALAS];
 
-        this.responsableld = -1;
+        this.responsableId = -1;
     }
 
     /**
@@ -82,8 +82,20 @@ public class Gimnasio {
         }
         return null;
 
-
     }
+
+    public boolean designarResponsable(int numeroSocio){
+        boolean resultado = false;
+
+        for (int i = 0; i < MAX_SOCIOS && !resultado; i++) {
+            if (socios[i].getNumSocio() == numeroSocio){
+                responsableId = i;
+                resultado = true;
+            }
+        }
+        return resultado;
+    }
+
 
 
 
