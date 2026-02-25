@@ -32,9 +32,9 @@ public class Gimnasio {
     }
 
     /**
-     *
+     * Registramos socios
      * @param socio
-     * @return
+     * @return si le ha añadido y todó es correcto devuelve un true sino un false
     */
 
     public boolean registrarSocios(Socio socio) {
@@ -48,6 +48,11 @@ public class Gimnasio {
         return resultado;
     }
 
+    /**
+     * Comprueba si hay hueco en socios
+     * @return si ha encontrado hueco devuelve un true sino un false
+     */
+
     public boolean comprobarSiHayHueco(){
         boolean resultado = false;
 
@@ -59,6 +64,12 @@ public class Gimnasio {
         }
         return resultado;
     }
+
+    /**
+     * Busca el socio si esta o no esta a traves de un id
+     * @param id del socio
+     * @return si le ha encontrado devuelve un true sino un false
+     */
 
     public boolean buscarSocio(int id){
         boolean resultado = false;
@@ -72,6 +83,12 @@ public class Gimnasio {
         return resultado;
     }
 
+    /**
+     * Expulsa socio del array socios a traves de un id
+     * @param id del socio
+     * @return si le ha expulsado y todó es correcto devuelve un true sino un false
+     */
+
     public Socio expulsarSocio(int id){
 
         for (int i = 0; i < MAX_SOCIOS; i++) {
@@ -83,6 +100,12 @@ public class Gimnasio {
         return null;
 
     }
+
+    /**
+     * Designamos un responsable a traves de el numero socio
+     * @param numeroSocio del socio
+     * @return si le ha designado y todó es correcto devuelve un true sino un false
+     */
 
     public boolean designarResponsable(int numeroSocio){
         boolean resultado = false;

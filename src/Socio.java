@@ -16,7 +16,7 @@ public class Socio {
 
     /**
      * Obtener número de socio
-     * @return
+     * @return devuelve el número del socio
      */
 
     public int getNumSocio() {
@@ -25,7 +25,7 @@ public class Socio {
 
     /**
      * Obtener nombre de socio
-     * @return
+     * @return devuelve el nombre del socio
      */
 
     public String getNombre() {
@@ -34,7 +34,7 @@ public class Socio {
 
     /**
      * Obtener la información entera de socio
-     * @return
+     * @return devuelve la información del socio
      */
 
     @Override

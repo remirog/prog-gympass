@@ -15,7 +15,7 @@ public class Sala {
 
     /**
      * Obtener codigo de sala
-     * @return
+     * @return devuelve el código de la asla
      */
 
     public int getCodigoSala() {
@@ -24,7 +24,7 @@ public class Sala {
 
     /**
      * Obtener descripcion de sala
-     * @return
+     * @return devuelve la descripción de la sala
      */
 
     public String getDescripcion() {
@@ -33,7 +33,7 @@ public class Sala {
 
     /**
      * Obtener la información entera de socio
-     * @return
+     * @return devuelve la información de la sala
      */
 
     @Override
